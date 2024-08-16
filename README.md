@@ -1,4 +1,4 @@
-# Weight Loss tracking and Analysis
+# Weight Loss Tracking and Analysis
 This is a homework for "Použití počítačů ve fyzice (NOFY 084) " created by Jakub Mikeš.
 ## Overview
 This script helps you analyze your weight loss journey using scientific methods. It uses Orthogonal Distance Regression (ODR) to fit a weight loss model to your data, handles uncertainties, and provides visual feedback on your progress.
