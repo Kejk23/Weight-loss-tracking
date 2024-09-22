@@ -214,8 +214,4 @@ headers = ["Week", "Target Min Weight (kg)", "Target Max Weight (kg)"]
 print("Target long term weight loss ranges:")
 print(tabulate(table_data_nominal, headers=headers, floatfmt=".1f")) # it's easier to do the rounding here
 
-plt.savefig('weight_loss.png', dpi=300)
-
-# Keep the console window open
-print()
-input("Press Enter to exit...")
+plt.savefig('cut.png', dpi=300)
