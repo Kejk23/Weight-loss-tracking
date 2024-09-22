@@ -128,9 +128,11 @@ weights_unp = unp.uarray(weights, scale_std)
 [a_ufloat, b_ufloat] = odr_params(days_unp, weights_unp, weight_loss_model, initial_params=[86, 0.99])
 print(frmtr.format("Weekly weight loss coeff = {} ", b_ufloat))
 # Check if the weight loss is too fast, too slow, or on track
-if b_ufloat < target_b_min:
+if b_ufloat.n < target_b_min:
     print("You are losing weight too fast!")
-elif b_ufloat > target_b_max:
+elif b_ufloat.n >= 1:
+    print("You are gaining weight!")
+elif b_ufloat.n > target_b_max:
     print("You are losing weight too slow!")
 else:
     print("You are on track!")
